@@ -33,11 +33,17 @@ p span  {
       width: 100%; 
       display: block; 
       text-align: left;
+      margin-bottom: -16px;
+      color:lightgrey;
+      font-weight: lighter;
+      font-style: italic;
+      font-size: 70px;
+      
 }
 /* RASTER */
 
  /* HEADER */
-#header {
+ #header {
     display: block;
     height: 400px;
     width: 100%;
@@ -47,7 +53,18 @@ p span  {
     background-position:left bottom ;
     position: relative;
     text-align: center;
-    margin-bottom: 35px;   
+    margin-bottom: 35px; 
+    animation-name: slideshow;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@keyframes slidshow {
+    0% {background-image: url(/images/water-lily-1592793_1920.png);}
+    25% {background-image: url(/images/man-1853545_960_720.webp);}
+    50% {background-image: url(/images/man-1853545_960_720.webp);}
+    75% {background-image: url(/images/water-lily-1592793_1920.png);}
+    100% {background-image: url(/images/water-lily-1592793_1920.png);}
 }
 .head_content {
     height: 70px;
@@ -103,6 +120,12 @@ ul.links li a.active {
 }
 #content .inner_container img {
     width: 100%;
+    transition: transform 0.7s;
+}
+#content .inner_container img:hover {
+    transform: scale(1.1 ,1.1);
+    max-width: 800px;
+
 }
 /* CONTENT Bereich */
 
@@ -118,6 +141,13 @@ ul.links li a.active {
 #footer .inner_container {
     display: flex;
     justify-content:space-between;
+}
+#footer .inner_container img {
+    opacity: 0.2;
+}
+#footer .inner_container img:hover {
+    transition: 0.3s;
+    opacity: 1.0;
 }
 .footer_spalte {
     text-align: left;
