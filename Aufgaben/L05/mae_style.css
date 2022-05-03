@@ -1,0 +1,238 @@
+* {box-sizing: border-box;}
+
+body {
+    width: 100%;
+    margin:0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	color: #333;
+	font-size: 16px
+}
+
+p {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+p span  {
+    font-weight: 600;
+}
+
+
+
+/* RASTER  */
+.inner_container {
+    position: relative;
+    margin: 0 auto !important;
+    width: 100%;
+    max-width:800px;
+    padding: 15px;
+    text-align: left;
+}
+.inner_container h1 {
+      width: 100%; 
+      display: block; 
+      text-align: left;
+      margin-bottom: -16px;
+      color:lightgrey;
+      font-weight: lighter;
+      font-style: italic;
+      font-size: 70px;
+      
+}
+/* RASTER */
+
+ /* HEADER */
+ #header {
+    display: block;
+    text-align: center;
+  
+}
+
+.background {
+    height: 400px;
+    width: 100%;
+    background-image: url(images/water-lily-1592793_1920.png);
+    background-repeat: no-repeat;
+    background-position: left bottom  ;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 35px; 
+    animation-name: slideshow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+@keyframes slideshow {
+    0% {background-image: url(../L05/images/water-lily-1592793_1920.png);}
+    25% {background-image: url(../L05/images/man-1853545_1920.jpg);}
+    50% {background-image: url(../L05/images/stars-964022_1280.png);}
+    75% {background-image: url(../L05/images/rose-1460773_1920.jpg);}
+    100% {background-image: url(../L05/images/orion-nebula-11107_1920.jpg);}
+}
+.head_content {
+    height: 70px;
+}
+.logo {
+    width: 200px;
+    position:absolute;
+    top: 15px;
+    left: 15px;
+}
+.logo img {
+    width: 100%;
+}
+
+.banner {
+    position: fixed;
+    bottom: 680px;
+    right: -400px;
+    width: 1000px;
+    background-color: rgb(29, 26, 26);
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: rotate(40deg)
+}
+/* nav */
+ul.links {
+    position:absolute;
+    top: 15px;
+    right: 15px;
+    margin:0px;
+    margin-top: 15px;
+    padding: 0px;
+}
+
+ul.links li {
+    padding: 10px;
+    display: inline;
+    list-style-type: none;
+    font-weight: 600;
+}
+
+ul.links li a {
+    color: #999999;
+    text-decoration: none;
+}
+ul.links li a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+ul.links li a.active {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+/* nav */
+ /* HEADER */
+
+
+/* CONTENT Bereich */
+#content {
+    width: 100%;
+    display: block;
+    margin-bottom: 35px;
+    text-align: center;
+}
+#content .inner_container img {
+    width: 100%;
+    transition: transform 0.7s;
+}
+#content .inner_container img:hover {
+    transform: scale(1.1 ,1.1);
+    max-width: 800px;
+
+}
+
+/* CONTENT Bereich */
+
+/* Footer */
+#footer {
+    width: 100%;
+    overflow: hidden;
+    background-color: #eaeaea;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#footer .inner_container {
+    display: flex;
+    justify-content:space-between;
+}
+#footer .inner_container img {
+    opacity: 0.2;
+}
+#footer .inner_container img:hover {
+    transition: 0.3s;
+    opacity: 1.0;
+}
+.footer_spalte {
+    text-align: left;
+}
+/* Footer */
+
+
+/* Form */
+input {
+    background-color:#999999;
+    margin-bottom: 10px;
+    color: white;
+    padding: 10px;
+    border: 1px solid #f2f2f2;
+    width: 100%;
+    max-width: 500px;
+
+}
+textarea {
+    background-color: #999999;
+    color: white;
+    padding: 10px;
+    border: 1px solid #f2f2f2;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 4px;
+}
+::placeholder {
+    color: white;
+}
+input[type=submit] {
+    width: 180px;
+}
+/* Form */
+
+
+
+/*  MOBILE */
+@media screen and (max-width: 590px) {
+    ul.links {
+        position:absolute;
+        text-align: center;
+        top: 120px;
+        right: 5px;
+        left: 5px;
+        width: 100%;
+        margin:0px;
+        padding: 0px;
+    }
+    .logo {
+        width: 100%;
+        position:relative;
+        text-align: center;
+        left:0px
+    }
+    .logo img {
+        width:200px;
+    }
+
+    #footer .inner_container {
+        display: block;
+        text-align: center;
+    }
+    .footer_spalte {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+ }
